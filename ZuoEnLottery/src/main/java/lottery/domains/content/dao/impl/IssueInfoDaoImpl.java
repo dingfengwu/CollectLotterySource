@@ -1,5 +1,7 @@
 package lottery.domains.content.dao.impl;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -23,5 +25,14 @@ private final String tab = IssueInfo.class.getSimpleName();
 		Object[] values = {Code,Issue,LotteryId};
 		return superDao.update(hql, values);
 	}
+
+	@Override
+	public IssueInfo getIssueInfo(Date time) {
+		// TODO Auto-generated method stub
+		String hql = "from "+tab+" where SaleEnd = ?0 and LotteryId = 4";
+		Object[] values = {time};
+		return (IssueInfo)superDao.unique(hql, values);
+	}
+	
 
 }

@@ -1,6 +1,4 @@
 package lottery.domains.content.entity;
-
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -43,7 +41,8 @@ public class TXonline {
 	public void setTime(String time) {
 		this.time = time;
 	}
-	
-	
 
+	public String ToString() {
+		return "期数："+this.issue+"  在线人数:"+this.count+"  时间:"+this.time;
+	}
 }

@@ -27,7 +27,7 @@ public class TXonlineDaoImpl implements TXonlineDao {
 
 	@Override
 	public TXonline get(String issue) {
-		String hql = "from " + tab + " where issue = ?0 ";
+		String hql = "from " + tab + " where issue = ?0";
 		Object[] values = {issue};
 		return (TXonline) superDao.unique(hql, values);
 	}

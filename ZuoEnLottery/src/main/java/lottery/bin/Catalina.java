@@ -24,8 +24,9 @@ public class Catalina {
 	/**
 	 * OpenCai
 	 * @throws IOException 
+	 * @throws InterruptedException 
 	 */
-	public void executeOpenCai() throws IOException {
+	public void executeOpenCai() throws IOException{
 	
 		mOpenCaiJob.execute();
 

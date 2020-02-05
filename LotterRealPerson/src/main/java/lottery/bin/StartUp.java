@@ -1,3 +1,6 @@
+
+
+
 package lottery.bin;
 
 import org.slf4j.Logger;
